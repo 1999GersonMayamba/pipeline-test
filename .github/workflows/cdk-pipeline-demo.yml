@@ -17,8 +17,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
       with:
-          #token: ${{ secrets.GIT_ACCESS_TOKEN }}
-          path: ${{ github.repository }}
+          token: ${{ secrets.GIT_ACCESS_TOKEN }}
 
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v2
