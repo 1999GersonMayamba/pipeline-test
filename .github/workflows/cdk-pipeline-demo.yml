@@ -20,13 +20,13 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: install app dependencies
-      working-directory: ./src/CddkPipelineDemo
-      run: npm ci
+   # - name: install app dependencies
+   #  working-directory: ./src/CddkPipelineDemo
+   #  run: npm ci
 
-    - name: build app
-      working-directory: ./cdk-pipeline-demo
-      run: npm run build
+   #  - name: build app
+   #   working-directory: ./cdk-pipeline-demo
+   #   run: npm run build
     
     - name: install aws cdk
       run: sudo npm install -g aws-cdk
@@ -36,11 +36,11 @@ jobs:
    #   run: pip3 install -r requirements.txt
 
     - name: cdk synth
-      working-directory: ./cdk-pipeline-demo
+      #working-directory: ./cdk-pipeline-demo
       run: cdk synth
 
     - name: cdk deploy
-      working-directory: ./cdk-pipeline-demo
+      #working-directory: ./cdk-pipeline-demo
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
