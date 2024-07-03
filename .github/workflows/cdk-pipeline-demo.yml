@@ -41,9 +41,9 @@ jobs:
       #working-directory: ./cdk-pipeline-demo
       run: cdk synth
 
-    - name: cdk bootstrap
+   # - name: cdk bootstrap
       #working-directory: ./cdk-pipeline-demo
-      run: cdk bootstrap
+   #   run: cdk bootstrap
 
     - name: cdk deploy
       #working-directory: ./cdk-pipeline-demo
@@ -51,4 +51,4 @@ jobs:
     #    AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
     #    AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
     #    AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
-      run: cdk deploy
+      run: cdk deploy --all --require-approval never
