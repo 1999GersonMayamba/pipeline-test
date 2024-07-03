@@ -19,21 +19,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-
-   # - name: install app dependencies
-   #  working-directory: ./src/CddkPipelineDemo
-   #  run: npm ci
-
-   #  - name: build app
-   #   working-directory: ./cdk-pipeline-demo
-   #   run: npm run build
     
     - name: install aws cdk
       run: sudo npm install -g aws-cdk
-
-   # - name: install deployment dependencies
-   #   working-directory: ./cdk-pipeline-demo
-   #   run: pip3 install -r requirements.txt
 
     - name: cdk synth
       #working-directory: ./cdk-pipeline-demo
