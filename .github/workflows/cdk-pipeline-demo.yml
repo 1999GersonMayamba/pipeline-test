@@ -23,7 +23,7 @@ jobs:
       uses: aws-actions/configure-aws-credentials@v2
       with:
         role-to-assume: arn:aws:iam::471112851791:role/github.to.aws.oicd
-        #aws-region: ${{ secrets.AWS_DEFAULT_REGION }}
+        aws-region: ${{ secrets.AWS_DEFAULT_REGION }}
     
     - name: install aws cdk
       run: sudo npm install -g aws-cdk
