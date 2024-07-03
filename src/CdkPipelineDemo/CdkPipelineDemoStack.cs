@@ -10,16 +10,16 @@ namespace CdkPipelineDemo
         {
             // The code that defines your stack goes here
 
-            var restAPI = new LambdaRestApi(this, "Teste-Api-Gateway-cdk", new LambdaRestApiProps
-            {
-                Proxy = true,        
-                EndpointTypes = new[] { EndpointType.REGIONAL },
-                RestApiName = "Teste-Api-Gateway-cdk",
-                Description= "Teste de API Gateway com CDK pepiline"
+            // var restAPI = new LambdaRestApi(this, "Teste-Api-Gateway-cdk", new LambdaRestApiProps
+            // {
+            //     Proxy = true,        
+            //     EndpointTypes = new[] { EndpointType.REGIONAL },
+            //     RestApiName = "Teste-Api-Gateway-cdk",
+            //     Description= "Teste de API Gateway com CDK pepiline"
         
-            });
+            // });
 
-            _ = new CfnOutput(this, "apigwtarn", new CfnOutputProps { Value = restAPI.ArnForExecuteApi() });
+            // _ = new CfnOutput(this, "apigwtarn", new CfnOutputProps { Value = restAPI.ArnForExecuteApi() });
         }
     }
 }
